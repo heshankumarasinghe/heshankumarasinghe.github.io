@@ -225,7 +225,7 @@
                 <!-- Filteration Dropdown and Search and Clear Button End -->
 
                 <!-- Courses Loading Container -->
-                <div class="absolute flex justify-center items-center bg-accent top-0 left-0 w-full h-full opacity-40">
+                <div id="courses-loading-container" class="absolute hidden justify-center items-center bg-accent top-0 left-0 w-full h-full opacity-40">
                     <div class="col-3">
                         <div class="snippet" data-title="dot-flashing">
                             <div class="stage">
@@ -1152,6 +1152,8 @@
             nationalityDropdownMenu
         ];
 
+        const coursesLoadingContainer = document.querySelector('#courses-loading-container');
+
         const courseTypes = document.querySelector('#course-types');
 
         const courseTypeButtons = courseTypes.querySelectorAll('.oval-button');
@@ -1445,6 +1447,15 @@
                 currentCourseType.classList.add('oval-button-active');
             });
         }
+
+        searchCoursesButton.addEventListener('click', () => {
+            coursesLoadingContainer.classList.remove('hidden');
+            coursesLoadingContainer.classList.add('flex');
+            setTimeout(() => {
+                coursesLoadingContainer.classList.remove('flex');
+                coursesLoadingContainer.classList.add('hidden');
+            }, 3000);
+        });
 
         clearAllButton.addEventListener('click', () => {
             selectedDisciplines.length = 0;
