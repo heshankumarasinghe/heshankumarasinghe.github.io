@@ -1,0 +1,1645 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="https://kit.fontawesome.com/da076da576.js" crossorigin="anonymous"></script>
+    <title>WFI Education - Courses</title>
+</head>
+
+<body>
+    <header>
+        <!-- Nav -->
+        <nav class="bg-accent relative">
+            <ul class="nav-list">
+                <li>
+                    <!-- Logo Image -->
+                    <a href="#">
+                        <img class="w-12 h-12" src="./assets/app/images/logo.jpg" alt="">
+                    </a>
+                    <!-- Logo Image End -->
+                </li>
+                <li class="nav-link-item underline-animation">
+                    <a class="h-full flex justify-center items-center" href="#">Becoming a student</a>
+                </li>
+                <li class="nav-link-item underline-animation">
+                    <a class="h-full flex justify-center items-center" href="#">Courses</a>
+                </li>
+                <li class="nav-link-item underline-animation">
+                    <a class="h-full flex justify-center items-center" href="#">Progressing students</a>
+                </li>
+                <li class="nav-link-item underline-animation">
+                    <a class="h-full flex justify-center items-center" href="#">Campus life</a>
+                </li>
+                <li class="nav-link-item underline-animation">
+                    <a class="h-full flex justify-center items-center" href="#">Blog</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- Nav End -->
+    </header>
+
+    <!-- Courses Hero Image -->
+    <section id="courses-hero-image">
+        <div class="relative hero-image-container w-full text-center">
+            <img class="w-full h-full object-cover" src="./assets/app/images/coursesHeroImage.jpg" alt="">
+            <div class="absolute top-1/3 left-1/2 -translate-x-1/2 w-1/3 text-onPrimary">
+                <h2 class="font-semibold text-5xl">Full-time & Part-time Courses</h2>
+                <p class="mt-8 text-gray-100">Developed as launchpads to your ideal industry, our diplomas allow you to
+                    progress to degrees offered by our international university</p>
+            </div>
+        </div>
+    </section>
+    <!-- Courses Hero Image End -->
+
+    <!-- Find a Course Section -->
+    <section class="mt-20">
+        <div class="container mx-auto">
+            <!-- Find a Course Heading -->
+            <h2 class="font-bold uppercase text-primary text-3xl">Find A Course</h2>
+            <!-- Find a Course Heading End -->
+            <!-- Course Type Selection Buttons -->
+            <div id="course-types" class="flex gap-5 mt-9">
+                <button data-value='certificate-and-diploma'
+                    class="oval-button oval-button-active w-[calc(25%-1.25rem)]">Certificate
+                    & Diploma</button>
+                <button data-value="undergraduate" class="oval-button w-[calc(25%-1.25rem)]">Undergraduate</button>
+                <button data-value='postgraduate' class="oval-button w-[calc(25%-1.25rem)]">Postgraduate</button>
+                <button data-value="short-professional-course" class="oval-button w-[calc(25%-1.25rem)]">Short
+                    Professional Course</button>
+            </div>
+            <!-- Course Type Selection Buttons End -->
+            <div class="relative bg-primary mt-11 px-12 py-7 text-onPrimary">
+                <!-- Filteration Dropdown and Search and Clear All Button -->
+                <div class="flex justify-between items-center gap-10">
+                    <div class="w-full">
+                        <!-- Filteration Dropdowns -->
+                        <div class="flex justify-between gap-10">
+                            <!-- Disciplines Dropdown Start -->
+                            <div id="disciplines-dropdown"
+                                class="relative flex justify-between items-center w-1/4 border-b border-b-onPrimary pb-1.5 text-onPrimary font-light">
+                                <p class="dropdown-text">Disciplines</p>
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <!-- Disciplines Dropdown Menu Content -->
+                                <div id="disciplines-dropdown-menu"
+                                    class="dropdown-menu absolute hidden w-full max-h-[11rem] overflow-scroll p-4 bottom-0 translate-y-[calc(100%+0.5rem)] bg-gray-100 text-slate-500">
+                                    <ul>
+                                        <li data-value='all' class="menu-item flex items-start cursor-pointer">
+                                            <div class="dropdown-menu-checkbox"></div>
+                                            <p>Select All</p>
+                                        </li>
+                                        <li data-value='account' class="menu-item mt-2 flex items-start cursor-pointer">
+                                            <div class="dropdown-menu-checkbox"></div>
+                                            <p>Accounting & Financing Courses</p>
+                                        </li>
+                                        <li data-value='analytics'
+                                            class="menu-item mt-2 flex items-start cursor-pointer">
+                                            <div class="dropdown-menu-checkbox"></div>
+                                            <p>Analytic Courses</p>
+                                        </li>
+                                        <li data-value='business'
+                                            class="menu-item mt-2 flex items-start cursor-pointer">
+                                            <div class="dropdown-menu-checkbox"></div>
+                                            <p>Business Management Courses</p>
+                                        </li>
+                                        <li data-value='cyber-security'
+                                            class="menu-item mt-2 flex items-start cursor-pointer">
+                                            <div class="dropdown-menu-checkbox"></div>
+                                            <p>Cyber Security Courses</p>
+                                        </li>
+                                        <li data-value='engineering'
+                                            class="menu-item mt-2 flex items-start cursor-pointer">
+                                            <div class="dropdown-menu-checkbox"></div>
+                                            <p>Engineering Courses</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- Disciplines Dropdown Menu Content End -->
+                            </div>
+                            <!-- Disciplines Dropdown End -->
+                            <!-- Academic Dropdown Start -->
+                            <div id="academic-dropdown"
+                                class="relative flex justify-between items-center w-1/4 border-b border-b-onPrimary pb-1.5 text-onPrimary font-light">
+                                <p class="dropdown-text">Academic Level</p>
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <!-- Academic Dropdown Menu Content -->
+                                <div id="academic-dropdown-menu"
+                                    class="absolute dropdown-menu hidden w-full max-h-[11rem] overflow-scroll py-4 bottom-0 translate-y-[calc(100%+0.5rem)] bg-gray-100 text-slate-500">
+                                    <ul>
+                                        <li data-value='academic-level'
+                                            class="menu-item dropdown-menu-text dropdown-menu-text-active">
+                                            <p>Academic Level</p>
+                                        </li>
+                                        <li data-value='igcse-course'
+                                            class="menu-item dropdown-menu-text hover:dropdown-menu-text-active">
+                                            <p>IGCSE Course</p>
+                                        </li>
+                                        <li data-value='certificate-courses'
+                                            class="menu-item dropdown-menu-text hover:dropdown-menu-text-active">
+                                            <p>Certificate Courses</p>
+                                        </li>
+                                        <li data-value='diploma-courses'
+                                            class="menu-item dropdown-menu-text hover:dropdown-menu-text-active">
+                                            <p>Diploma Courses</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- Academic Menu Content End -->
+                            </div>
+                            <!-- Academic Dropdown End -->
+                            <!-- Awarding Institutes Dropdown Start -->
+                            <div id="awarding-institute-dropdown"
+                                class="relative flex justify-between items-center w-1/4 border-b border-b-onPrimary pb-1.5 text-onPrimary font-light">
+                                <p class="dropdown-text">Awarding Institute</p>
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <!-- Awarding Institutes Dropdown Menu Content -->
+                                <div id="awarding-institute-dropdown-menu"
+                                    class="dropdown-menu absolute hidden w-full max-h-[11rem] overflow-scroll py-4 bottom-0 translate-y-[calc(100%+0.5rem)] bg-gray-100 text-slate-500">
+                                    <ul>
+                                        <li data-value='awarding-institute'
+                                            class="menu-item dropdown-menu-text dropdown-menu-text-active">
+                                            <p>Awarding Institute</p>
+                                        </li>
+                                        <li data-value='psb-academy'
+                                            class="menu-item dropdown-menu-text hover:dropdown-menu-text-active">
+                                            <p>PSB Academy</p>
+                                        </li>
+                                        <li data-value='cambridge-assessment-international-education'
+                                            class="menu-item dropdown-menu-text hover:dropdown-menu-text-active">
+                                            <p>Cambridge Assessment International Education</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- Awarding Institutes Content End -->
+                            </div>
+                            <!-- Awarding Institutes Dropdown End -->
+                            <!-- Mode of Study Dropdown Start -->
+                            <div id="mode-of-study-dropdown"
+                                class="relative flex justify-between items-center w-1/4 border-b border-b-onPrimary pb-1.5 text-onPrimary font-light">
+                                <p class="dropdown-text">Mode of Study</p>
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <!-- Mode of Study Dropdown Menu Content -->
+                                <div id="mode-of-study-dropdown-menu"
+                                    class="dropdown-menu absolute hidden w-full max-h-[11rem] overflow-scroll py-4 bottom-0 translate-y-[calc(100%+0.5rem)] bg-gray-100 text-slate-500">
+                                    <ul>
+                                        <li data-value='mode-of-study'
+                                            class="menu-item dropdown-menu-text dropdown-menu-text-active">
+                                            <p>Mode of Study</p>
+                                        </li>
+                                        <li data-value='full-time'
+                                            class="menu-item dropdown-menu-text hover:dropdown-menu-text-active">
+                                            <p>Full Time</p>
+                                        </li>
+                                        <li data-value='part-time'
+                                            class="menu-item dropdown-menu-text hover:dropdown-menu-text-active">
+                                            <p>Part Time</p>
+                                        </li>
+                                        <li data-value='online'
+                                            class="menu-item dropdown-menu-text hover:dropdown-menu-text-active">
+                                            <p>Online</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- Mode of Study Content End -->
+                            </div>
+                            <!-- Mode of Study Dropdown End -->
+                        </div>
+                        <!-- Filteration Dropdowns End -->
+                        <!-- Clear All Button -->
+                        <div class="mt-3.5 flex">
+                            <button id="clear-all-btn"
+                                class="ml-auto text-sm tracking-wider font-extralight uppercase border-b border-onPrimary">Clear
+                                All</button>
+                        </div>
+                        <!-- Clear All Button End -->
+                    </div>
+                    <!-- Search Button -->
+                    <button id="search-courses-button">
+                        <i class="fa-solid fa-magnifying-glass fa-2xl mb-7"></i>
+                    </button>
+                    <!-- Search Button End -->
+                </div>
+                <!-- Filteration Dropdown and Search and Clear Button End -->
+
+                <!-- Courses Loading Container -->
+                <div class="absolute flex justify-center items-center bg-accent top-0 left-0 w-full h-full opacity-40">
+                    <div class="col-3">
+                        <div class="snippet" data-title="dot-flashing">
+                            <div class="stage">
+                                <div class="dot-flashing"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Courses Loading Container -->
+            </div>
+
+            <!-- Account and Finacne Accordion -->
+            <div class="accordion cursor-pointer mt-5">
+                <!-- Account & Finance Header -->
+                <div class="accordion-header">
+                    <div>
+                        <p class="text-xl font-bold">Account & Finance Courses</p>
+                        <p class="mt-2 font-extralight">3 Courses</p>
+                    </div>
+                    <i class="accordion-toggle-icon fa-solid fa-angle-down fa-xl"></i>
+                </div>
+                <!-- Account & Finance Header End -->
+                <!-- Account & Finance Accordion Body -->
+                <div class="flex flex-wrap gap-4 justify-start accordion-toggle accordion-toggle-collapsed">
+                    <!-- Card 1 -->
+                    <div class="relative shadow-lg px-8 py-4 h-60 w-[calc(25%-0.75rem)]">
+                        <h2 class="text-primary text-lg font-bold">Diploma in FinTech</h2>
+                        <div class="absolute bottom-4 left-8 w-[calc(100%-4rem)">
+                            <div class="w-9 h-9 mt-14">
+                                <img class="w-full h-full object-cover" src="./assets/app/images/logo.jpg" alt="">
+                            </div>
+                            <div class="flex justify-between items-center gap-16 font-semibold mt-2">
+                                <p class="whitespace-nowrap">
+                                    <span class="text-amber-500">Full-Time</span> <span class="text-gray-500">|</span>
+                                    <span class="text-teal-600">Part-Time</span>
+                                </p>
+                                <i class="fa-solid fa-angle-right text-primary"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 1 End -->
+                    <!-- Card 2 -->
+                    <div class="relative shadow-lg px-8 py-4 h-60 w-[calc(25%-0.75rem)]">
+                        <h2 class="text-primary text-lg font-bold">Diploma in Business Administration(Accounting &
+                            Finance)</h2>
+                        <div class="absolute bottom-4 left-8 w-[calc(100%-4rem)]">
+                            <div class="w-9 h-9 mt-14">
+                                <img class="w-full h-full object-cover" src="./assets/app/images/logo.jpg" alt="">
+                            </div>
+                            <div class="flex justify-between items-center gap-16 font-semibold mt-2">
+                                <p class="whitespace-nowrap">
+                                    <span class="text-amber-500">Full-Time</span> <span class="text-gray-500">|</span>
+                                    <span class="text-teal-600">Part-Time</span>
+                                </p>
+                                <i class="fa-solid fa-angle-right text-primary"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 2 End -->
+                    <!-- Card 3 -->
+                    <div class="relative shadow-lg px-8 py-4 h-60 w-[calc(25%-0.75rem)]">
+                        <h2 class="text-primary text-lg font-bold">Diploma in Business Administration</h2>
+                        <div class="absolute bottom-4 left-8 w-[calc(100%-4rem)]">
+                            <div class="w-9 h-9 mt-14">
+                                <img class="w-full h-full object-cover" src="./assets/app/images/logo.jpg" alt="">
+                            </div>
+                            <div class="flex justify-between items-center gap-16 font-semibold mt-2">
+                                <p class="whitespace-nowrap">
+                                    <span class="text-amber-500">Full-Time</span> <span class="text-gray-500">|</span>
+                                    <span class="text-teal-600">Part-Time</span>
+                                </p>
+                                <i class="fa-solid fa-angle-right text-primary"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 3 End -->
+                </div>
+                <!-- Account & Finance Accordion Body End -->
+            </div>
+            <!-- Account and Finance Accordion End -->
+            <!-- Analytics Courses Accordion -->
+            <div class="accordion cursor-pointer">
+                <!-- Analytics Courses Header -->
+                <div class="accordion-header accordion-header-secondary">
+                    <div>
+                        <p class="text-xl font-bold">Analyitics Courses</p>
+                        <p class="mt-2 font-extralight">2 Courses</p>
+                    </div>
+                    <i class="accordion-toggle-icon fa-solid fa-angle-down fa-xl"></i>
+                </div>
+                <!-- Analyitics Courses End -->
+                <!-- Analytics Courses Body -->
+                <div class="flex flex-wrap gap-4 justify-start accordion-toggle accordion-toggle-collapsed">
+                    <!-- Card 1 -->
+                    <div class="relative shadow-lg px-8 py-4 h-60 w-[calc(25%-0.75rem)]">
+                        <h2 class="text-primary text-lg font-bold">Diploma in Business Studies (Business Analyitics)
+                            (E-Learning)</h2>
+                        <div class="absolute bottom-4 left-8 w-[calc(100%-4rem)]">
+                            <div class="w-9 h-9 mt-14">
+                                <img class="w-full h-full object-cover" src="./assets/app/images/logo.jpg" alt="">
+                            </div>
+                            <div class="flex justify-between items-center gap-16 font-semibold mt-2">
+                                <p class="text-gray-500">Online</p>
+                                <i class="fa-solid fa-angle-right text-primary"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 1 End -->
+                    <!-- Card 2 -->
+                    <div class="relative shadow-lg px-8 py-4 h-60 w-[calc(25%-0.75rem)]">
+                        <h2 class="text-primary text-lg font-bold">Diploma in Business Administration(Accounting &
+                            Finance)</h2>
+                        <div class="absolute bottom-4 left-8 w-[calc(100%-4rem])">
+                            <div class="w-9 h-9 mt-14">
+                                <img class="w-full h-full object-cover" src="./assets/app/images/logo.jpg" alt="">
+                            </div>
+                            <div class="flex justify-between items-center gap-16 font-semibold mt-2">
+                                <p class="whitespace-nowrap">
+                                    <span class="text-amber-500">Full-Time</span> <span class="text-gray-500">|</span>
+                                    <span class="text-teal-600">Part-Time</span>
+                                </p>
+                                <i class="fa-solid fa-angle-right text-primary"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 2 End -->
+                </div>
+                <!-- Analytics Courses Body End -->
+            </div>
+            <!-- Analytics Courses Accordion End -->
+            <!-- Business Management Courses Accordion -->
+            <div class="accordion cursor-pointer">
+                <!-- Business Management Courses Header -->
+                <div class="accordion-header">
+                    <div>
+                        <p class="text-xl font-bold">Business Management Courses</p>
+                        <p class="mt-2 font-extralight">4 Courses</p>
+                    </div>
+                    <i class="accordion-toggle-icon fa-solid fa-angle-down fa-xl"></i>
+                </div>
+                <!-- Business Management Courses End -->
+                <!-- Business Management Courses Body -->
+                <div class="flex flex-wrap gap-4 justify-start accordion-toggle accordion-toggle-collapsed">
+                    <!-- Card 1 -->
+                    <div class="relative shadow-lg px-8 py-4 h-60 w-[calc(25%-0.75rem)]">
+                        <h2 class="text-primary text-lg font-bold">Diploma in Business Studies (Analyitics) (E-Learning)
+                        </h2>
+                        <div class="absolute bottom-4 left-8 w-[calc(100%-4rem)]">
+                            <div class="w-9 h-9 mt-14">
+                                <img class="w-full h-full object-cover" src="./assets/app/images/logo.jpg" alt="">
+                            </div>
+                            <div class="flex justify-between items-center gap-16 font-semibold mt-2">
+                                <p class="text-gray-500">Online</p>
+                                <i class="fa-solid fa-angle-right text-primary"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 1 End -->
+                    <!-- Card 2 -->
+                    <div class="relative shadow-lg px-8 py-4 h-60 w-[calc(25%-0.75rem)]">
+                        <h2 class="text-primary text-lg font-bold">Diploma in Business Studies (Digital Marketing)
+                            (E-Learning)</h2>
+                        <div class="absolute bottom-4 left-8 w-[calc(100%-4rem])">
+                            <div class="w-9 h-9 mt-14">
+                                <img class="w-full h-full object-cover" src="./assets/app/images/logo.jpg" alt="">
+                            </div>
+                            <div class="flex justify-between items-center gap-16 font-semibold mt-2">
+                                <p class="whitespace-nowrap">
+                                    <span class="text-amber-500">Full-Time</span> <span class="text-gray-500">|</span>
+                                    <span class="text-teal-600">Part-Time</span>
+                                </p>
+                                <i class="fa-solid fa-angle-right text-primary"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 2 End -->
+                    <!-- Card 3 -->
+                    <div class="relative shadow-lg px-8 py-4 h-60 w-[calc(25%-0.75rem)]">
+                        <h2 class="text-primary text-lg font-bold">Diploma in Business Studies (Human Resource
+                            Management) (E-Learninig)</h2>
+                        <div class="absolute bottom-4 left-8 w-[calc(100%-4rem)]">
+                            <div class="w-9 h-9 mt-14">
+                                <img class="w-full h-full object-cover" src="./assets/app/images/logo.jpg" alt="">
+                            </div>
+                            <div class="flex justify-between items-center gap-16 font-semibold mt-2">
+                                <p class="whitespace-nowrap">
+                                    <span class="text-amber-500">Full-Time</span> <span class="text-gray-500">|</span>
+                                    <span class="text-teal-600">Part-Time</span>
+                                </p>
+                                <i class="fa-solid fa-angle-right text-primary"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 3 End -->
+                    <!-- Card 4 -->
+                    <div class="relative shadow-lg px-8 py-4 h-60 w-[calc(25%-0.75rem)]">
+                        <h2 class="text-primary text-lg font-bold">Diploma in Business Studies (E-Learninig)</h2>
+                        <div class="absolute bottom-4 left-8 w-[calc(100%-4rem)]">
+                            <div class="w-9 h-9 mt-14">
+                                <img class="w-full h-full object-cover" src="./assets/app/images/logo.jpg" alt="">
+                            </div>
+                            <div class="flex justify-between items-center gap-16 font-semibold mt-2">
+                                <p class="whitespace-nowrap text-gray-500">Online</p>
+                                <i class="fa-solid fa-angle-right text-primary"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 4 End -->
+                </div>
+                <!-- Business Management Courses Body End -->
+            </div>
+            <!-- Business Management Courses Accordion End -->
+        </div>
+    </section>
+    <!-- Find a Course Section End -->
+
+    <!-- Explore Our Schools -->
+    <section class="mt-20">
+        <div class="container mx-auto">
+            <!-- Exlore our Schools Heading -->
+            <h2 class="font-bold uppercase text-primary text-3xl">Explore our Schools</h2>
+            <!-- Explore our Schools Heading End -->
+            <!-- Explore our Schools Content Container -->
+            <div class="mt-9 flex justify-between">
+                <!-- Explore our Schools Image Container -->
+                <div class="flex">
+                    <div
+                        class="explore-our-schools-image transition-item transition-item-active py-80 px-64 bg-center bg-cover bg-[url('https://www.psb-academy.edu.sg/wordpress/wp-content/uploads-webpc/uploads/2021/11/courses-sfs.jpg.webp')]">
+                    </div>
+                    <div
+                        class="explore-our-schools-image transition-item py-80 px-64 bg-center bg-cover bg-[url('https://www.psb-academy.edu.sg/wordpress/wp-content/uploads-webpc/uploads/2021/11/courses-sbm.jpg.webp')]">
+                    </div>
+                    <div
+                        class="explore-our-schools-image transition-item py-80 px-64 bg-center bg-cover bg-[url('https://www.psb-academy.edu.sg/wordpress/wp-content/uploads-webpc/uploads/2021/11/courses-set.jpg.webp')]">
+                    </div>
+                    <div
+                        class="explore-our-schools-image transition-item py-80 px-64 bg-center bg-cover bg-[url('https://www.psb-academy.edu.sg/wordpress/wp-content/uploads-webpc/uploads/2021/11/courses-slps.jpg.webp')]">
+                    </div>
+                    <div
+                        class="explore-our-schools-image transition-item py-80 px-64 bg-center bg-cover bg-[url('https://www.psb-academy.edu.sg/wordpress/wp-content/uploads-webpc/uploads/2021/11/courses-sps.jpg.webp')]">
+                    </div>
+                    <div
+                        class="explore-our-schools-image transition-item py-80 px-64 bg-center bg-cover bg-[url('https://www.psb-academy.edu.sg/wordpress/wp-content/uploads-webpc/uploads/2021/11/courses-da.jpg.webp')]">
+                    </div>
+                </div>
+                <!-- Explore our Schools Image Container End -->
+                <!-- Explore our Schools Options and Descriptions Container -->
+                <div class="flex justify-between gap-14 bg-gray-100 w-full px-8 py-14">
+                    <!-- Explore our Schools Options Container -->
+                    <div class="flex flex-col font-semibold text-xl text-secondary">
+                        <button
+                            class="explore-our-schools-option transition-item-option text-left leading-tight text-red-500">School
+                            of Foundation Studes</button>
+                        <button
+                            class="explore-our-schools-option transition-item-option mt-12 text-left leading-tight">School
+                            of Business and Management</button>
+                        <button
+                            class="explore-our-schools-option transition-item-option mt-12 text-left leading-tight">School
+                            of Engineering and Technology</button>
+                        <button
+                            class="explore-our-schools-option transition-item-option mt-12 text-left leading-tight">School
+                            of Health and Life Sciences</button>
+                        <button
+                            class="explore-our-schools-option transition-item-option mt-12 text-left leading-tight">School
+                            of Postgraduate Studies</button>
+                        <button
+                            class="explore-our-schools-option transition-item-option mt-12 text-left leading-tight">Digital
+                            Academy</button>
+                    </div>
+                    <!-- Explore our Schools Options Container End -->
+                    <!-- Explore our Schools Descriptions Container -->
+                    <div class="w-full">
+                        <!-- Explore our Schools Description 1 -->
+                        <div class="explore-our-schools-description transition-item transition-item-active">
+                            <h4 class="font-bold text-red-500 text-2xl tracking-tighter uppercase">School of Foundation
+                                Studies</h4>
+                            <div class="text-sm font-extralight text-gray-600">
+                                <p class="mt-4">
+                                    The School of Foundation Studies offers programmes that are designed to get young
+                                    students started in their education journey in PSB Academy. These programmes will
+                                    provide students with the knowledge as well as interpersonal skills, linguistic
+                                    skills
+                                    and general competence upon which to prepare the students for future education.
+                                </p>
+                                <p class="mt-4">Lessons within each course are designed with experiential learning
+                                    journeys
+                                    and interactive activities that focus on different subjects and skills. The School
+                                    also
+                                    runs study tours and short-term language skill workshops.</p>
+                            </div>
+                            <div class="mt-8 flex gap-8">
+                                <div>
+                                    <p class="font-bold text-red-500 text-6xl">06</p>
+                                    <p class="text-center font-bold text-secondary">Courses</p>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-red-500 text-6xl">02</p>
+                                    <p class="text-center font-bold text-secondary">Institutions</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Explore our Schools Description 1 End -->
+                        <!-- Explore our Schools Description 2 -->
+                        <div class="explore-our-schools-description transition-item">
+                            <h4 class="font-bold text-blue-500 text-2xl tracking-tighter uppercase">School of Business
+                                and Management</h4>
+                            <div class="text-sm font-extralight text-gray-600">
+                                <p class="mt-4">
+                                    If your heart is set on a future of accounting and finance, business, human
+                                    resource, logistics & supply chain management, marketing, media communications, or
+                                    perhaps tourism and hospitality, then all you need is the right course as a head
+                                    start to take you places.
+                                </p>
+                                <p class="mt-4">As Winner of Higher Education in Accounting and Tourism & Hospitality*,
+                                    we are proud to offer a wide range of industry-focused certificates, diplomas, and
+                                    bachelor’s degrees with both full-time and part-time options, in partnership with
+                                    AACSB-accredited business schools and renowned universities around the world.</p>
+                                <p class="mt-4">* JobsCentral Learning T.E.D. Awards 2019</p>
+                            </div>
+                            <div class="mt-8 flex gap-8">
+                                <div>
+                                    <p class="font-bold text-blue-500 text-6xl">34</p>
+                                    <p class="text-center font-bold text-secondary">Courses</p>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-blue-500 text-6xl">05</p>
+                                    <p class="text-center font-bold text-secondary">Institutions</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Explore our Schools Description 2 End -->
+                        <!-- Explore our Schools Description 3 -->
+                        <div class="explore-our-schools-description transition-item">
+                            <h4 class="font-bold text-amber-500 text-2xl tracking-tighter uppercase">School of
+                                Engineering and Technology</h4>
+                            <div class="text-sm font-extralight text-gray-600">
+                                <p class="mt-4">
+                                    The School of Engineering and Technology (SET) drives the future by shaping elite
+                                    generations of global nation-builders and digital think tanks. In line with the
+                                    rapid worldwide growth of the STEM sector, our full-time and part-time courses are
+                                    designed to ensure that students are equipped with relevant skills and are
+                                    industry-ready once they graduate from their respective specialised courses.
+                                </p>
+                                <p class="mt-4">Specialisations offered range from mechanical and electrical
+                                    engineering, to information technology and cybersecurity, to environmental and
+                                    occupational health and safety, catering to various key areas of interest within the
+                                    engineering and technology industry. SET courses provide an opportunity for our
+                                    students to apply their theoretical knowledge in a practical hands-on setting with
+                                    well-equipped engineering and computer labs and facilities, preparing them for
+                                    real-world challenges and scenarios.</p>
+                                <p class="mt-4">If you are an individual aspiring to take the lead in pushing the
+                                    boundaries of science and technology, join PSB Academy’s SET and be a part of our
+                                    network of engineers and technologists in Singapore!</p>
+                            </div>
+                            <div class="mt-8 flex gap-8">
+                                <div>
+                                    <p class="font-bold text-amber-500 text-6xl">23</p>
+                                    <p class="text-center font-bold text-secondary">Courses</p>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-amber-500 text-6xl">05</p>
+                                    <p class="text-center font-bold text-secondary">Institutions</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Explore our Schools Description 3 End -->
+                        <!-- Explore our Schools Description 4 -->
+                        <div class="explore-our-schools-description transition-item">
+                            <h4 class="font-bold text-emerald-500 text-2xl tracking-tighter uppercase">School of Health
+                                and Life Sciences</h4>
+                            <div class="text-sm font-extralight text-gray-600">
+                                <p class="mt-4">
+                                    The School of Health and Life Sciences prepares students to become dynamic and
+                                    innovative members of a global scientific community that creates the basis of
+                                    mankind’s future. We offer courses in a diverse array of areas including biomedical,
+                                    pharmaceutical and molecular science as well as sport and exercise sciences. In
+                                    addition, our bespoke, fully equipped university-standard laboratories ensure that
+                                    students have the necessary practical skills and experience to allow for a seamless
+                                    transition into positions in relevant industries and post-graduate studies.
+                                </p>
+                            </div>
+                            <div class="mt-8 flex gap-8">
+                                <div>
+                                    <p class="font-bold text-emerald-500 text-6xl">15</p>
+                                    <p class="text-center font-bold text-secondary">Courses</p>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-emerald-500 text-6xl">05</p>
+                                    <p class="text-center font-bold text-secondary">Institutions</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Explore our Schools Description 4 End -->
+                        <!-- Explore our Schools Description 5 -->
+                        <div class="explore-our-schools-description transition-item">
+                            <h4 class="font-bold text-slate-600 text-2xl tracking-tighter uppercase">School of
+                                Postgraduate Studies</h4>
+                            <div class="text-sm font-extralight text-gray-600">
+                                <p class="mt-4">
+                                    Located right in the heart of Singapore, PSB Academy’s City Campus provides working
+                                    professionals with a focal point on postgraduate and executive education. Together
+                                    with globally leading universities and business schools – some of which are
+                                    accredited by AACSB, AMBA and EQUIS – the School of Postgraduate Studies offers a
+                                    comprehensive selection of MBAs, specialised Master’s Degrees, Doctoral Degrees, and
+                                    more across 6 disciplines.
+                                </p>
+                                <p class="mt-4">
+                                    Dedicated to pushing boundaries in quality education, lessons are delivered by
+                                    academics with curated learning materials. The 100,000 square feet City Campus @
+                                    Marina Square also incorporates specialised MBA seminar rooms with
+                                    acoustically-treated walls and video conferencing capabilities to help forge a
+                                    conducive learning environment where learners can advance their knowledge,
+                                    communicate and build meaningful connections.
+                                </p>
+                                <p class="mt-4">
+                                    Regardless of your career aspirations, business growth or learning needs, you can
+                                    browse and find a suitable full-time or part-time course that meets your
+                                    requirements in the discipline of accounting & finance, analytics, business
+                                    management, cyber security, engineering business management, logistics & supply
+                                    chain management, and life sciences.
+                                </p>
+                            </div>
+                            <div class="mt-8 flex gap-8">
+                                <div>
+                                    <p class="font-bold text-slate-600 text-6xl">14</p>
+                                    <p class="text-center font-bold text-secondary">Courses</p>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-slate-600 text-6xl">07</p>
+                                    <p class="text-center font-bold text-secondary">Institutions</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Explore our Schools Description 5 End -->
+                        <!-- Explore our Schools Description 6 -->
+                        <div class="explore-our-schools-description transition-item">
+                            <h4 class="font-bold text-green-600 text-2xl tracking-tighter uppercase">Digital Academy
+                            </h4>
+                            <div class="text-sm font-extralight text-gray-600">
+                                <p class="mt-4">
+                                    PSB Academy’s Digital Academy provides students with access to e-learning
+                                    certificate and diploma courses that help chart their path to a degree from our
+                                    university partners. Students can study anywhere, anytime at their own pace without
+                                    the hassle of travelling to campus.
+                                </p>
+                            </div>
+                            <div class="mt-8 flex gap-8">
+                                <div>
+                                    <p class="font-bold text-green-600 text-6xl">14</p>
+                                    <p class="text-center font-bold text-secondary">Courses</p>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-green-600 text-6xl">07</p>
+                                    <p class="text-center font-bold text-secondary">Institutions</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Explore our Schools Description 6 End -->
+                    </div>
+                    <!-- Explore our Schools Descriptions Container End -->
+                </div>
+                <!-- Explore our Schools Options and Descriptions Container End -->
+            </div>
+            <!-- Explore our Schools Content Container End -->
+        </div>
+    </section>
+    <!-- Explore Our Schools End -->
+
+    <!-- Awarding Institutions -->
+    <section class="mt-40">
+        <div class="container mx-auto">
+            <!-- Awarding Institutions Heading -->
+            <h2 class="font-bold uppercase text-primary text-3xl">Awarding Institutions</h2>
+            <!-- Awarding Institutions Heading End -->
+            <div class="container flex gap-16 mt-2">
+                <!-- Institute Names Container -->
+                <div class="basis-1/3">
+                    <div>
+                        <h3
+                            class="underline-animation underline-animation-no-overflow cursor-pointer inline-block py-2 relative font-bold text-lg text-gray-500 hover:text-primary">
+                            WFI Education</h3>
+                    </div>
+                    <div>
+                        <h3
+                            class="underline-animation underline-animation-no-overflow cursor-pointer inline-block py-2 relative font-bold text-lg text-gray-500 hover:text-primary">
+                            Conventry University</h3>
+                    </div>
+                    <div>
+                        <h3
+                            class="underline-animation underline-animation-no-overflow cursor-pointer inline-block py-2 relative font-bold text-lg text-gray-500 hover:text-primary">
+                            Edinburgh Napier University</h3>
+                    </div>
+                    <div>
+                        <h3
+                            class="underline-animation underline-animation-no-overflow cursor-pointer inline-block py-2 relative font-bold text-lg text-gray-500 hover:text-primary">
+                            Edith Cowan University</h3>
+                    </div>
+                    <div>
+                        <h3
+                            class="underline-animation underline-animation-no-overflow cursor-pointer inline-block py-2 relative font-bold text-lg text-gray-500 hover:text-primary">
+                            La Trobe University</h3>
+                    </div>
+                    <div>
+                        <h3
+                            class="underline-animation underline-animation-no-overflow cursor-pointer inline-block py-2 relative font-bold text-lg text-gray-500 hover:text-primary">
+                            Massey University</h3>
+                    </div>
+                    <div>
+                        <h3
+                            class="underline-animation underline-animation-no-overflow cursor-pointer inline-block py-2 relative font-bold text-lg text-gray-500 hover:text-primary">
+                            The University of Newscastle, Australia</h3>
+                    </div>
+                    <div>
+                        <h3
+                            class="underline-animation underline-animation-no-overflow cursor-pointer inline-block py-2 relative font-bold text-lg text-gray-500 hover:text-primary">
+                            University of Canberra</h3>
+                    </div>
+                    <div>
+                        <h3
+                            class="underline-animation underline-animation-no-overflow cursor-pointer inline-block py-2 relative font-bold text-lg text-gray-500 hover:text-primary">
+                            University of California, Irvine</h3>
+                    </div>
+                    <div>
+                        <h3
+                            class="underline-animation underline-animation-no-overflow cursor-pointer inline-block py-2 relative font-bold text-lg text-gray-500 hover:text-primary">
+                            University of Hertfordshire</h3>
+                    </div>
+                    <div>
+                        <h3
+                            class="underline-animation underline-animation-no-overflow cursor-pointer inline-block py-2 relative font-bold text-lg text-gray-500 hover:text-primary">
+                            University of Nottingham</h3>
+                    </div>
+                    <div>
+                        <h3
+                            class="underline-animation underline-animation-no-overflow cursor-pointer inline-block py-2 relative font-bold text-lg text-gray-500 hover:text-primary">
+                            Cambridge Assessment International Education</h3>
+                    </div>
+                    <div>
+                        <h3
+                            class="underline-animation underline-animation-no-overflow cursor-pointer inline-block py-2 relative font-bold text-lg text-gray-500 hover:text-primary">
+                            American Council on Exercise (ACE)</h3>
+                    </div>
+                </div>
+                <!-- Institutes Names Container End -->
+                <!-- Institute Image and Info Container -->
+                <div class="basis-2/3">
+                    <!-- Image and Info Card 1 -->
+                    <div class="relative">
+                        <!-- Image Container -->
+                        <div
+                            class="px-96 py-40 bg-center bg-cover bg-[url('https://www.psb-academy.edu.sg/wordpress/wp-content/uploads-webpc/uploads/2023/03/PSBA_stemcampus.jpg.webp')]">
+                        </div>
+                        <!-- Image Container End -->
+                        <!-- Info Container -->
+                        <!-- <div class="absolute w-4/5 py-8 px-12 flex place-items-start -bottom-24 left-0 translate-y-1/2 gap-10 bg-onPrimary"> -->
+                        <div
+                            class="absolute w-4/5 py-8 px-12 flex place-items-start top-3/4 left-1/2 -translate-x-1/2 gap-10 bg-onPrimary">
+                            <!-- Institution Logo -->
+                            <div
+                                class="p-8 bg-center bg-contain bg-no-repeat bg-[url('https://www.psb-academy.edu.sg/wordpress/wp-content/uploads/2020/07/logo-psb-academy.svg')]">
+                            </div>
+                            <!-- Institution Logo End -->
+                            <!-- Institute Description -->
+                            <div class="text-gray-400 text-sm font-light">
+                                <p>
+                                    As one of Singapore’s leading private education institutions with almost 60-years
+                                    heritage of producing more than 200,000 learners, PSB Academy is committed to
+                                    defining our identity as “Asia’s Future Academy”. Established in 1964, we started
+                                    under Singapore’s Economic Development Board and later Productivity and Standards
+                                    Board to upgrade the knowledge and skills of Singapore’s workforce. With an approach
+                                    to education that focuses on what really matters: performance in the New Economy,
+                                    PSB Academy provides quality education to shape and nurture future-ready graduates
+                                    with the necessary skills and tools to stay relevant in a digitally-driven economy.
+                                </p>
+                            </div>
+                            <!-- Institute Description End -->
+                        </div>
+                        <!-- Info Container End -->
+                    </div>
+                    <!-- Image and Info Card 1 End -->
+                </div>
+                <!-- Institute Image and Info Container End -->
+            </div>
+        </div>
+    </section>
+    <!-- Awarding Institutions End -->
+
+    <!-- Enquire Now -->
+    <section class="mt-40 bg-slate-100">
+
+        <div class="container mx-auto py-10">
+            <!-- Enquire Now Form -->
+            <form id="enquire-now-form" action="#" method="POST" novalidate>
+                <!-- Enquire Now Heading -->
+                <h2 class="font-bold uppercase text-primary text-3xl">Enquire Now</h2>
+                <!-- Enquire Now Heading End -->
+                <!-- Full Name Input and Error Message -->
+                <div id="full-name-input">
+                    <input
+                        class="input mt-3.5 w-full p-4 font-light placeholder-gray-400 focus:outline-none active:outline-none"
+                        type="text" name="fullName" placeholder="Full Name">
+                    <p class="error-text hidden ml-1 mt-1 text-red-600 font-extralight"></p>
+                </div>
+                <!-- Full Name Input and Error Messge End -->
+                <!-- Institution and Course Container -->
+                <div class="mt-3.5 flex gap-4">
+                    <!-- Institution Input and Error Message -->
+                    <div id="instituition-input" class="w-full">
+                        <!-- Institution Inpput -->
+                        <div
+                            id="instituition-dropdown"
+                            class="input relative flex justify-between items-center mt-3.5 w-full p-4 font-light text-gray-400 bg-white focus:outline-none active:outline-none">
+                            <p class="dropdown-text">Institution</p>
+                            <i class="fa-solid fa-chevron-down"></i>
+                            <div id="instituition-dropdown-menu"
+                                class="dropdown-menu hidden absolute z-50 w-full max-h-48 overflow-scroll left-0 top-full bg-gray-100 text-slate-500">
+                                <ul>
+                                    <li data-value='wfiEeducation' class="menu-item dropdown-menu-text">
+                                        <p>WFI Education</p>
+                                    </li>
+                                    <li data-value='coventryUniversity' class="menu-item dropdown-menu-text">
+                                        <p>Conventry University</p>
+                                    </li>
+                                    <li data-value='edinburghNapierUniversity' class="menu-item dropdown-menu-text">
+                                        <p>Edinburgh Napier University</p>
+                                    </li>
+                                    <li data-value='edithCowanUniversity' class="menu-item dropdown-menu-text">
+                                        <p>Edith Cowan University</p>
+                                    </li>
+                                    <li data-value='laTrobeUniversity' class="menu-item dropdown-menu-text">
+                                        <p>La Trobe University</p>
+                                    </li>
+                                    <li data-value='masseyUniveristy' class="menu-item dropdown-menu-text">
+                                        <p>Massey University</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Institution Input End -->
+                        <!-- Institution Input Error Message -->
+                        <p class="error-text hidden ml-1 mt-1 text-red-600 font-extralight">Institute is required</p>
+                        <!-- Institution Input Error Message End -->
+                    </div>
+                    <!-- Institution Input and Error Message End -->
+                    <!-- Course Input and Error Message -->
+                    <div id="course-input" class="w-full">
+                        <!-- Course Inpput -->
+                        <div
+                            id="course-dropdown"
+                            class="input relative flex justify-between items-center mt-3.5 w-full p-4 font-light text-gray-400 bg-white focus:outline-none active:outline-none">
+                            <p class="dropdown-text">Course</p>
+                            <i class="fa-solid fa-chevron-down"></i>
+                            <div id="course-dropdown-menu"
+                                class="dropdown-menu hidden absolute z-50 w-full max-h-48 overflow-scroll left-0 top-full bg-gray-100 text-slate-500">
+                                <ul>
+                                    <li data-value='diplomaInBlockchain' class="menu-item dropdown-menu-text">
+                                        <p>Diploma in Blockchain</p>
+                                    </li>
+                                    <li data-value='certificateInBusinessMangement' class="menu-item dropdown-menu-text">
+                                        <p>Certificate in Business Management</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Course Input End -->
+                        <!-- Course Input Error Message -->
+                        <p class="error-text hidden ml-1 mt-1 text-red-600 font-extralight">Course is required</p>
+                        <!-- Course Input Error Message End -->
+                    </div>
+                    <!-- Course Input and Error Message End -->
+                </div>
+                <!-- Institute and Course Container End -->
+                <!-- Highest Qualification and Error Message -->
+                <div id="highest-qualification-input" class="mt-7">
+                    <!-- Highest Qualification Input -->
+                    <div
+                        id="highest-qualification-dropdown"
+                        class="input relative flex justify-between items-center mt-3.5 w-full p-4 font-light text-gray-400 bg-white focus:outline-none active:outline-none">
+                        <p class="dropdown-text">Highest Qualification</p>
+                        <i class="fa-solid fa-chevron-down"></i>
+                        <div id="highest-qualification-dropdown-menu"
+                            class="dropdown-menu hidden absolute z-50 w-full max-h-48 overflow-scroll left-0 top-full bg-gray-100 text-slate-500">
+                            <ul>
+                                <li data-value='gceOL' class="menu-item dropdown-menu-text">
+                                    <p>G.C.E O/L</p>
+                                </li>
+                                <li data-value='gceAL' class="menu-item dropdown-menu-text">
+                                    <p>G.C.E A/L</p>
+                                </li>
+                                <li data-value='doctorate' class="menu-item dropdown-menu-text">
+                                    <p>Doctorate</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Highest Qualification Input End -->
+                    <!-- Highest Qualification Error Message -->
+                    <p class="error-text hidden ml-1 mt-1 text-red-600 font-extralight">Course is required</p>
+                    <!-- Highest Qualification Error Message End -->
+                </div>
+                <!-- Highest Qualification and Error Message End -->
+                <!-- Country Code Input and Mobile Number Input Container -->
+                <div class="mt-3.5 flex gap-4">
+                    <!-- Country Code and Error Message -->
+                    <div id="country-code-input">
+                        <!-- Country Code Input -->
+                        <input
+                            class="input min-w-0 w-20 mt-3.5 p-4 font-light placeholder-gray-400 focus:outline-none active:outline-none"
+                            type="text" name="countryCode" placeholder="+94">
+                        <!-- Country Code Input End -->
+                        <!-- Error Message -->
+                        <!-- <p class="hidden ml-1 mt-1 text-red-600 font-extralight">/p> -->
+                        <!-- Error Message End -->
+                    </div>
+                    <div id="mobile-number-input" class="basis-full">
+                        <!-- Mobile Number Input -->
+                        <input
+                            class="input w-full mt-3.5 p-4 font-light placeholder-gray-400 focus:outline-none active:outline-none"
+                            type="text" name="mobileNumber" placeholder="Mobile Number">
+                        <!-- Mobile Number Input End -->
+                        <!-- Error Message -->
+                        <p class="error-text hidden ml-1 mt-1 text-red-600 font-extralight"></p>
+                        <!-- Error Message End -->
+                    </div>
+                </div>
+                <!-- Country Code Input and Mobile Number Input End -->
+                <!-- Email Input and Error Message -->
+                <div id="email-input">
+                    <input
+                        class="input mt-7 w-full p-4 font-light placeholder-gray-400 focus:outline-none active:outline-none"
+                        type="email" name="email" placeholder="Email">
+                    <p class="error-text hidden ml-1 mt-1 text-red-600 font-extralight"></p>
+                </div>
+                <!-- Email Input and Error Messge End -->
+                <!-- Nationality and Error Message -->
+                <div id="nationality-input" class="mt-7">
+                    <!-- Nationality Input -->
+                    <div
+                        id="nationality-dropdown"
+                        class="input relative flex justify-between items-center mt-3.5 w-full p-4 font-light text-gray-400 bg-white focus:outline-none active:outline-none">
+                        <p class="dropdown-text">Nationality</p>
+                        <i class="fa-solid fa-chevron-down"></i>
+                        <div id="nationality-dropdown-menu"
+                            class="dropdown-menu hidden absolute z-50 w-full max-h-48 overflow-scroll left-0 top-full bg-gray-100 text-slate-500">
+                            <ul>
+                                <li data-value='sriLanka' class="menu-item dropdown-menu-text">
+                                    <p>Sri Lanka</p>
+                                </li>
+                                <li data-value='india' class="menu-item dropdown-menu-text">
+                                    <p>India</p>
+                                </li>
+                                <li data-value='australia' class="menu-item dropdown-menu-text">
+                                    <p>Australia</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Nationality Input End -->
+                    <!-- Nationality Error Message -->
+                    <p class="error-text hidden ml-1 mt-1 text-red-600 font-extralight">Nationality is required</p>
+                    <!-- Nationality Error Message End -->
+                </div>
+                <!-- Nationality and Error Message End -->
+                <!-- Email Consent Text -->
+                <p class="mt-4 font-light text-slate-600 text-sm">By submitting your personal information, you expressly allow WFI Education to contact you for marketing and promotional purposes</p>
+                <!-- Email Consent Text End -->
+                <!-- Submit Button -->
+                <button type="submit" class="mt-6 uppercase px-10 py-3 bg-primary text-onPrimary font-light cursor-pointer">Submit</button>
+                <!-- Submit Button End -->
+            </form>
+            <!-- Enquire Now Form End -->
+        </div>
+    </section>
+    <!-- Enquire Now End -->
+
+    <!-- Scholorships Start -->
+    <section id="apply-for-sholorship" class="mt-20">
+        <div class="container relative mx-auto px-10 py-40 after:content-[''] after:block after:absolute after:top-0 after:left-0 after:w-full after:h-full after:bg-black after:opacity-40 after:z-10 bg-top bg-cover bg-no-repeat bg-[url('data:image/jpeg;base64,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')]">
+            <div class="absolute bottom-8 z-50 uppercase text-white">
+                <h3 class="text-xl font-bold">Scholorships</h3>
+                <p class="mt-1 text-sm tracking-widest font-light normal-case">Develop your full potential with our range of scholorships</p>
+                <div class="mt-6 flex justify-start items-center">
+                    <a class="font-bold cursor-pointer">Learn More</a>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Scholorships End -->
+
+    <!-- Footer Start -->
+    <footer class="mt-20 bg-accent">
+        <div class="flex gap-12 container mx-auto text-white font-bold p-8">
+            <!-- Terms of Use, Site Map, Data Protection and FAQ -->
+            <div class="flex justify-between uppercase w-1/3 text-center">
+                <p class="mr-1">Terms of Use</p>
+                <p class="mr-1">Data Protection</p>
+                <p>FAQ</p>
+            </div>
+            <!-- Terms of Use, Site Map, Data Protection and FAQ -->
+            <div class="w-1/3">
+                <p class="text-center">Copyright 2023 WFI Education Ltd. All Rights Reserved</p>
+            </div>
+            <div class="flex justify-between items-center w-1/6">
+                <i class="fa-brands fa-facebook fa-xl"></i>
+                <i class="fa-brands fa-instagram fa-xl"></i>
+                <i class="fa-brands fa-tiktok fa-xl"></i>
+                <i class="fa-brands fa-linkedin fa-xl"></i>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+    <script src="./assets/vendor/jquery/js/jquery.min.js"></script>
+    <script src="./assets/vendor/swiper/js/swiper-bundle.min.js"></script>
+    <script src="./assets/vendor/owlCarousel/js/owl.carousel.min.js"></script>
+    <script>
+        // ------------- Carousel Section -------------
+
+        const transitionItemOptions = document.querySelectorAll('.transition-item-option');
+        const exploreOurSchoolsImageItems = document.querySelectorAll('.explore-our-schools-image');
+        const exploreOurSchoolsDescriptionItems = document.querySelectorAll('.explore-our-schools-description');
+        const exploreOurSchoolsOptions = document.querySelectorAll('.explore-our-schools-option');
+
+        const classNames = ['text-red-500', 'text-blue-500', 'text-amber-500', 'text-emerald-500', 'text-slate-600', 'text-green-600'];
+
+        // Toggle the correct color for the given options of explore our schools options
+        exploreOurSchoolsOptions.forEach((option, index) => {
+            option.addEventListener('click', (event) => {
+                const classNameIndex = index % classNames.length;
+                const classNameToToggle = classNames[classNameIndex];
+
+                for (const option of exploreOurSchoolsOptions) {
+                    const classes = option.classList;
+
+                    for (const className of classes) {
+                        for (const colorClassname of classNames) {
+                            if (className === colorClassname) {
+                                option.classList.remove(className);
+                            }
+                        }
+                    }
+                }
+
+                event.currentTarget.classList.toggle(classNameToToggle);
+            });
+        });
+
+        transitionItemOptions.forEach((option) => {
+            option.addEventListener('click', () => {
+                // Add the fading image transition and content transition animations for left image and right content
+                const index = Array.from(exploreOurSchoolsOptions).indexOf(option);
+
+                for (const item of exploreOurSchoolsImageItems) {
+                    item.classList.remove('transition-item-active');
+                }
+
+                for (const item of exploreOurSchoolsDescriptionItems) {
+                    item.classList.remove('transition-item-active');
+                }
+
+                exploreOurSchoolsImageItems[index].classList.add('transition-item-active');
+
+
+                exploreOurSchoolsDescriptionItems[index].classList.add('transition-item-active');
+            });
+        });
+
+        // ------------- Carousel Section End -------------
+
+
+        // Todo Refactor this later
+
+        // ------------- Course Search Section and Enquire Now Dropdowns -------------
+        const disciplinesDropdown = document.querySelector('#disciplines-dropdown');
+        const disciplinesDropdownMenu = disciplinesDropdown.querySelector('#disciplines-dropdown-menu');
+        const disciplinesDropdownMenuItems = disciplinesDropdownMenu.querySelectorAll('.menu-item');
+        const disciplinesDropdownMenuItemsCheckboxes = disciplinesDropdownMenu.querySelectorAll('.dropdown-menu-checkbox');
+
+        const academicDropdown = document.querySelector('#academic-dropdown');
+        const academicDropdownText = academicDropdown.querySelector('.dropdown-text');
+        const academicDropdownMenu = academicDropdown.querySelector('#academic-dropdown-menu');
+        const academicDropdownMenuItems = academicDropdownMenu.querySelectorAll('.menu-item');
+
+        const awardingInstituteDropdown = document.querySelector('#awarding-institute-dropdown');
+        const awardingInstituteDropdownText = awardingInstituteDropdown.querySelector('.dropdown-text');
+        const awardingInstituteDropdownMenu = awardingInstituteDropdown.querySelector('#awarding-institute-dropdown-menu');
+        const awardingInstituteDropdownMenuItems = awardingInstituteDropdownMenu.querySelectorAll('.menu-item');
+
+        const modeOfStudyDropdown = document.querySelector('#mode-of-study-dropdown');
+        const modeOfStudyDropdownText = modeOfStudyDropdown.querySelector('.dropdown-text');
+        const modeOfStudyDropdownMenu = modeOfStudyDropdown.querySelector('#mode-of-study-dropdown-menu');
+        const modeOfStudyDropdownMenuItems = modeOfStudyDropdownMenu.querySelectorAll('.menu-item');
+
+        // Enquire Now Inputs
+        const instituitionDropdown = document.querySelector('#instituition-dropdown');
+        const instituitionDropdownText = instituitionDropdown.querySelector('.dropdown-text');
+        const instituitionDropdownMenu = instituitionDropdown.querySelector('#instituition-dropdown-menu');
+        const instituitionDropdownMenuItems = instituitionDropdownMenu.querySelectorAll('.menu-item');
+
+        const courseDropdown = document.querySelector('#course-dropdown');
+        const courseDropdownText = courseDropdown.querySelector('.dropdown-text');
+        const courseDropdownMenu = courseDropdown.querySelector('#course-dropdown-menu');
+        const courseDropdownMenuItems = courseDropdownMenu.querySelectorAll('.menu-item');
+
+        const highestQualificationDropdown = document.querySelector('#highest-qualification-dropdown');
+        const highestQualificationDropdownText = highestQualificationDropdown.querySelector('.dropdown-text');
+        const highestQualificationDropdownMenu = highestQualificationDropdown.querySelector('#highest-qualification-dropdown-menu');
+        const highestQualificationDropdownMenuItems = highestQualificationDropdownMenu.querySelectorAll('.menu-item');
+
+        const nationalityDropdown = document.querySelector('#nationality-dropdown');
+        const nationalityDropdownText = nationalityDropdown.querySelector('.dropdown-text');
+        const nationalityDropdownMenu = nationalityDropdown.querySelector('#nationality-dropdown-menu');
+        const nationalityDropdownMenuItems = nationalityDropdownMenu.querySelectorAll('.menu-item');
+
+        const dropdownMenus = [
+            disciplinesDropdownMenu, 
+            academicDropdownMenu, 
+            awardingInstituteDropdownMenu, 
+            modeOfStudyDropdownMenu,
+            instituitionDropdownMenu,
+            courseDropdownMenu,
+            highestQualificationDropdownMenu,
+            nationalityDropdownMenu
+        ];
+
+        const courseTypes = document.querySelector('#course-types');
+
+        const courseTypeButtons = courseTypes.querySelectorAll('.oval-button');
+
+        const clearAllButton = document.querySelector('#clear-all-btn');
+        const searchCoursesButton = document.querySelector('#search-courses-button');
+
+        const selectedDisciplines = [];
+        let selectedCourseType = courseTypeButtons[0].dataset.value;
+        let selectedAcademicOption = null;
+        let selectedAwardingInstitiuteOption = null;
+        let selectedModeOfStudyOption = null;
+
+        // Enquire now Input Values
+        let selectedInstitution = null;
+        let selectedCourse = null;
+        let selectedHightestQualification = null;
+        let selectedNationality = null;
+
+        document.addEventListener('click', (event) => {
+            for (const dropdownMenu of dropdownMenus) {
+                if (!dropdownMenu.contains(event.target) && !dropdownMenu.classList.contains('hidden')) {
+                    dropdownMenu.classList.add('hidden');
+                }
+            }
+        });
+
+        disciplinesDropdown.addEventListener('click', (event) => {
+            event.stopPropagation();
+
+            if (event.target !== event.currentTarget) return;
+
+            const currentDropdownMenu = event.target.querySelector('.dropdown-menu');
+
+            for (const dropdownMenu of dropdownMenus) {
+
+                if (currentDropdownMenu !== dropdownMenu && !dropdownMenu.classList.contains('hidden')) {
+                    dropdownMenu.classList.add('hidden');
+                }
+            }
+
+            disciplinesDropdownMenu.classList.toggle('hidden');
+        });
+
+        academicDropdown.addEventListener('click', (event) => {
+            event.stopPropagation();
+
+            if (event.target !== event.currentTarget) return;
+
+            const currentDropdownMenu = event.target.querySelector('.dropdown-menu');
+
+            for (const dropdownMenu of dropdownMenus) {
+
+                if (currentDropdownMenu !== dropdownMenu && !dropdownMenu.classList.contains('hidden')) {
+                    dropdownMenu.classList.add('hidden');
+                }
+            }
+
+            academicDropdownMenu.classList.toggle('hidden');
+        });
+
+        awardingInstituteDropdown.addEventListener('click', (event) => {
+            event.stopPropagation();
+
+            if (event.target !== event.currentTarget) return;
+
+            const currentDropdownMenu = event.target.querySelector('.dropdown-menu');
+
+            for (const dropdownMenu of dropdownMenus) {
+
+                if (currentDropdownMenu !== dropdownMenu && !dropdownMenu.classList.contains('hidden')) {
+                    dropdownMenu.classList.add('hidden');
+                }
+            }
+
+            awardingInstituteDropdownMenu.classList.toggle('hidden');
+        });
+
+        modeOfStudyDropdown.addEventListener('click', (event) => {
+            event.stopPropagation();
+
+            if (event.target !== event.currentTarget) return;
+
+            const currentDropdownMenu = event.target.querySelector('.dropdown-menu');
+
+            for (const dropdownMenu of dropdownMenus) {
+
+                if (currentDropdownMenu !== dropdownMenu && !dropdownMenu.classList.contains('hidden')) {
+                    dropdownMenu.classList.add('hidden');
+                }
+            }
+
+            modeOfStudyDropdownMenu.classList.toggle('hidden');
+        });
+
+        instituitionDropdown.addEventListener('click', (event) => {
+            event.stopPropagation();
+
+            if (event.target !== event.currentTarget) return;
+
+            const currentDropdownMenu = event.target.querySelector('.dropdown-menu');
+
+            for (const dropdownMenu of dropdownMenus) {
+
+                if (currentDropdownMenu !== dropdownMenu && !dropdownMenu.classList.contains('hidden')) {
+                    dropdownMenu.classList.add('hidden');
+                }
+            }
+
+            instituitionDropdownMenu.classList.toggle('hidden');
+        });
+
+        courseDropdown.addEventListener('click', (event) => {
+            event.stopPropagation();
+
+            if (event.target !== event.currentTarget) return;
+
+            const currentDropdownMenu = event.target.querySelector('.dropdown-menu');
+
+            for (const dropdownMenu of dropdownMenus) {
+
+                if (currentDropdownMenu !== dropdownMenu && !dropdownMenu.classList.contains('hidden')) {
+                    dropdownMenu.classList.add('hidden');
+                }
+            }
+
+            courseDropdownMenu.classList.toggle('hidden');
+        });
+
+        nationalityDropdown.addEventListener('click', (event) => {
+            event.stopPropagation();
+
+            if (event.target !== event.currentTarget) return;
+
+            const currentDropdownMenu = event.target.querySelector('.dropdown-menu');
+
+            for (const dropdownMenu of dropdownMenus) {
+
+                if (currentDropdownMenu !== dropdownMenu && !dropdownMenu.classList.contains('hidden')) {
+                    dropdownMenu.classList.add('hidden');
+                }
+            }
+
+            nationalityDropdownMenu.classList.toggle('hidden');
+        });
+
+        for (const menuItem of disciplinesDropdownMenuItems) {
+            menuItem.addEventListener('click', (event) => {
+                const value = event.currentTarget.dataset.value;
+
+                if (value === 'all') {
+                    for (const checkbox of disciplinesDropdownMenuItemsCheckboxes) {
+                        checkbox.classList.toggle('dropdown-menu-checkbox-active');
+                    }
+                } else {
+                    const currentTargetCheckbox = event.currentTarget.querySelector('.dropdown-menu-checkbox');
+                    currentTargetCheckbox.classList.toggle('dropdown-menu-checkbox-active');
+                }
+
+                const isValueSelected = selectedDisciplines.includes(value);
+
+                if (isValueSelected) {
+                    selectedDisciplineIndex = selectedDisciplines.indexOf(value);
+                    selectedDisciplines.splice(selectedDisciplineIndex, 1);
+                } else {
+                    selectedDisciplines.push(value);
+                }
+            });
+        }
+
+        for (const menuItem of academicDropdownMenuItems) {
+            menuItem.addEventListener('click', (event) => {
+
+                for (const menuItem of academicDropdownMenuItems) {
+                    menuItem.classList.remove('dropdown-menu-text-active');
+                }
+
+                event.currentTarget.classList.toggle('dropdown-menu-text-active');
+
+                academicDropdownText.textContent = event.currentTarget.textContent;
+
+                const value = event.currentTarget.dataset.value;
+                selectedAcademicOption = value;
+
+                academicDropdownMenu.classList.toggle('hidden');
+            });
+        }
+
+        for (const menuItem of awardingInstituteDropdownMenuItems) {
+            menuItem.addEventListener('click', (event) => {
+
+                for (const menuItem of awardingInstituteDropdownMenuItems) {
+                    menuItem.classList.remove('dropdown-menu-text-active');
+                }
+
+                event.currentTarget.classList.toggle('dropdown-menu-text-active');
+
+                awardingInstituteDropdownText.textContent = event.currentTarget.textContent;
+
+                const value = event.currentTarget.dataset.value;
+                selectedAwardingInstitiuteOption = value;
+
+                awardingInstituteDropdownMenu.classList.toggle('hidden');
+            });
+        }
+
+        for (const menuItem of modeOfStudyDropdownMenuItems) {
+            menuItem.addEventListener('click', (event) => {
+
+                for (const menuItem of modeOfStudyDropdownMenuItems) {
+                    menuItem.classList.remove('dropdown-menu-text-active');
+                }
+
+                event.currentTarget.classList.toggle('dropdown-menu-text-active');
+
+                modeOfStudyDropdownText.textContent = event.currentTarget.textContent;
+
+                const value = event.currentTarget.dataset.value;
+                selectedModeOfStudyOption = value;
+
+                modeOfStudyDropdownMenu.classList.toggle('hidden');
+            });
+        }
+
+        for (const menuItem of instituitionDropdownMenuItems) {
+            menuItem.addEventListener('click', (event) => {
+
+                for (const menuItem of instituitionDropdownMenuItems) {
+                    menuItem.classList.remove('dropdown-menu-text-active');
+                }
+
+                event.currentTarget.classList.toggle('dropdown-menu-text-active');
+
+                instituitionDropdownText.textContent = event.currentTarget.textContent;
+
+                const value = event.currentTarget.dataset.value;
+                selectedInstitution = value;
+
+                instituitionDropdownMenu.classList.toggle('hidden');
+            });
+        }
+
+        for (const menuItem of courseDropdownMenuItems) {
+            menuItem.addEventListener('click', (event) => {
+
+                for (const menuItem of courseDropdownMenuItems) {
+                    menuItem.classList.remove('dropdown-menu-text-active');
+                }
+
+                event.currentTarget.classList.toggle('dropdown-menu-text-active');
+
+                courseDropdownText.textContent = event.currentTarget.textContent;
+
+                const value = event.currentTarget.dataset.value;
+                selectedCourse = value;
+
+                courseDropdownMenu.classList.toggle('hidden');
+            });
+        }
+
+        for (const menuItem of nationalityDropdownMenuItems) {
+            menuItem.addEventListener('click', (event) => {
+
+                for (const menuItem of nationalityDropdownMenuItems) {
+                    menuItem.classList.remove('dropdown-menu-text-active');
+                }
+
+                event.currentTarget.classList.toggle('dropdown-menu-text-active');
+
+                nationalityDropdownText.textContent = event.currentTarget.textContent;
+
+                const value = event.currentTarget.dataset.value;
+                selectedNationality = value;
+
+                nationalityDropdownMenu.classList.toggle('hidden');
+            });
+        }
+
+        for (const courseTypeButton of courseTypeButtons) {
+            courseTypeButton.addEventListener('click', (event) => {
+                event.stopPropagation();
+
+                const currentCourseType = event.currentTarget;
+
+                selectedCourseType = currentCourseType.dataset.value;
+
+                for (const courseTypeButton of courseTypeButtons) {
+                    courseTypeButton.classList.remove('oval-button-active');
+                }
+
+                currentCourseType.classList.add('oval-button-active');
+            });
+        }
+
+        clearAllButton.addEventListener('click', () => {
+            selectedDisciplines.length = 0;
+            selectedCourseType = courseTypeButtons[0].dataset.value;
+            selectedAcademicOption = null;
+            selectedAwardingInstitiuteOption = null;
+            selectedModeOfStudyOption = null;
+
+            for (const courseTypeButton of courseTypeButtons) {
+                courseTypeButton.classList.remove('oval-button-active');
+            }
+
+            courseTypeButtons[0].classList.add('oval-button-active');
+
+            for (const checkbox of disciplinesDropdownMenuItemsCheckboxes) {
+                checkbox.classList.remove('dropdown-menu-checkbox-active');
+            }
+
+            const firstAcademicItem = academicDropdownMenuItems[0];
+            const firstAcademicItemText = firstAcademicItem.querySelector('p').textContent;
+            academicDropdownText.textContent = firstAcademicItemText;
+
+            for (const menuItem of academicDropdownMenuItems) {
+                menuItem.classList.remove('dropdown-menu-text-active');
+            }
+
+            firstAcademicItem.classList.add('dropdown-menu-text-active');
+
+            const firstAwardingInstituteItem = awardingInstituteDropdownMenuItems[0];
+            const firstAwardingInstituteItemText = firstAwardingInstituteItem.querySelector('p').textContent;
+            awardingInstituteDropdownText.textContent = firstAwardingInstituteItemText;
+
+            for (const menuItem of awardingInstituteDropdownMenuItems) {
+                menuItem.classList.remove('dropdown-menu-text-active');
+            }
+
+            firstAwardingInstituteItem.classList.add('dropdown-menu-text-active');
+
+            const firstModeOfStudyItem = modeOfStudyDropdownMenuItems[0];
+            const firstModeOfStudyItemText = firstModeOfStudyItem.querySelector('p').textContent;
+            modeOfStudyDropdownText.textContent = firstModeOfStudyItemText;
+
+            for (const menuItem of modeOfStudyDropdownMenuItems) {
+                menuItem.classList.remove('dropdown-menu-text-active');
+            }
+
+            firstModeOfStudyItem.classList.add('dropdown-menu-text-active');
+        });
+
+        searchCoursesButton.addEventListener('click', () => {
+            console.log('Course Type', selectedCourseType);
+            console.log('Disciplines', selectedDisciplines);
+            console.log('Academic Type', selectedAcademicOption);
+            console.log('Awarding Institute', selectedAwardingInstitiuteOption);
+            console.log('Mode of Study', selectedModeOfStudyOption);
+        });
+
+        // ------------- Course Search Section End -------------
+
+        // ------------- Accordion Section -------------
+        const accordionItems = document.querySelectorAll('.accordion');
+
+        for (const accordionItem of accordionItems) {
+            accordionItem.addEventListener('click', () => {
+                const accordionToggle = accordionItem.querySelector('.accordion-toggle');
+                const accordionToggleIcon = accordionItem.querySelector('.accordion-toggle-icon');
+
+                // Toggle accordion 
+                accordionToggle.classList.toggle('accordion-toggle-collapsed');
+                accordionToggle.classList.toggle('accordion-toggle-active');
+
+                // Toggle accordion toggle icon
+                accordionToggleIcon.classList.toggle('fa-angle-down');
+                accordionToggleIcon.classList.toggle('fa-angle-up');
+            });
+        }
+        // ------------- Accordion End -------------
+
+        // ------------- Enquire Now Form Handling Start -------------
+        const enquireNowForm = document.querySelector('#enquire-now-form');
+
+        const fullNameInputContainer = document.querySelector('#full-name-input');
+        const fullNameInput = fullNameInputContainer.querySelector('.input');
+        const fullNameInputErrorText = fullNameInputContainer.querySelector('.error-text');
+
+        const emailContainer = document.querySelector('#email-input');
+        const emailInput = emailContainer.querySelector('.input');
+        const emailInputErrorText = emailContainer.querySelector('.error-text');
+
+        const countryCodeContainer = document.querySelector('#country-code-input');
+        const countryCodeInput = countryCodeContainer.querySelector('.input');
+
+        const mobileNumberContainer = document.querySelector('#mobile-number-input');
+        const mobileNumberInput = mobileNumberContainer.querySelector('.input');
+        const mobileNumberErrorText = mobileNumberContainer.querySelector('.error-text');
+
+        const instituitionContainer = document.querySelector('#instituition-input');
+        const instituitionInput = instituitionContainer.querySelector('.input');
+        const instituitionErrorText = instituitionContainer.querySelector('.error-text');
+
+        const courseContainer = document.querySelector('#course-input');
+        const courseInput = courseContainer.querySelector('.input');
+        const courseErrorText = courseContainer.querySelector('.error-text');
+
+        const highestQualificationContainer = document.querySelector('#highest-qualification-input');
+        const highestQualificationInput = highestQualificationContainer.querySelector('.input');
+        const highestQualificationErrorText = highestQualificationContainer.querySelector('.error-text');
+
+        const nationalityContainer = document.querySelector('#nationality-input');
+        const nationalityInput = nationalityContainer.querySelector('.input');
+        const nationalityErrorText = nationalityContainer.querySelector('.error-text');
+
+        enquireNowForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            // hide all error messages, remove their text content and remove error border from inputs
+
+            const fullNamePattern = /^[A-Za-z]+ [A-Za-z]+(?: [A-Za-z]+)*$/;
+            const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+            const internationalMobileNumberPattern = /^\+(?:[0-9] ?){6,14}[0-9]$/;
+
+            const enteredFullName = fullNameInput.value.trim();
+            const enteredEmail = emailInput.value.trim();
+            let enteredCountryCode = countryCodeInput.value.trim();
+            const enteredMobileNumber = mobileNumberInput.value.trim();
+
+            // Derive international mobile number from entered country code an mobile number
+            if(enteredCountryCode !== '' && !enteredCountryCode.startsWith('+')) {
+                enteredCountryCode = `+${enteredCountryCode}`;
+            }
+
+            const enteredInternationalMobileNumber = `${enteredCountryCode}${enteredMobileNumber}`;
+
+            // Refactor this form
+            if(enteredFullName === '') {
+                fullNameInput.classList.toggle('error-input');
+                fullNameInputErrorText.classList.toggle('hidden');
+                fullNameInputErrorText.textContent = 'Full Name is required'
+            } else if(!fullNamePattern.test(enteredFullName)) {
+                fullNameInput.classList.toggle('error-input');
+                fullNameInputErrorText.classList.toggle('hidden');
+                fullNameInputErrorText.textContent = 'Full Name is invalid'
+            }
+
+            if(enteredEmail === '') {
+                emailInput.classList.toggle('error-input');
+                emailInputErrorText.classList.toggle('hidden');
+                emailInputErrorText.textContent = 'Email is required';
+            } else if(!emailPattern.test(enteredEmail)) {
+                emailInput.classList.toggle('error-input');
+                emailInputErrorText.classList.toggle('hidden');
+                emailInputErrorText.textContent = 'Email is invalid';
+            }
+
+            if(enteredCountryCode === '') {
+                countryCodeInput.classList.toggle('error-input');
+                mobileNumberInput.classList.toggle('error-input');
+                mobileNumberErrorText.classList.toggle('hidden');
+                mobileNumberErrorText.textContent = 'Country Code is required';
+            } else if (enteredMobileNumber === '') {
+                mobileNumberInput.classList.toggle('error-input');
+                mobileNumberErrorText.classList.toggle('hidden');
+                mobileNumberErrorText.textContent = 'Mobile Number is required';
+            } else if (!internationalMobileNumberPattern.test(enteredInternationalMobileNumber)) {
+                mobileNumberInput.classList.toggle('error-input');
+                mobileNumberErrorText.classList.toggle('hidden');
+                mobileNumberErrorText.textContent = 'Mobile Number is invalid';
+            }
+            
+            if(selectedInstitution === null) {
+                instituitionInput.classList.toggle('error-input');
+                instituitionErrorText.classList.toggle('hidden');
+                instituitionErrorText.textContent = 'Instituition is required';
+            }
+
+            if(selectedCourse === null) {
+                courseInput.classList.toggle('error-input');
+                courseErrorText.classList.toggle('hidden');
+                courseErrorText.textContent = 'Course is required';
+            }
+
+            if(selectedHightestQualification === null) {
+                highestQualificationInput.classList.toggle('error-input');
+                highestQualificationErrorText.classList.toggle('hidden');
+                highestQualificationErrorText.textContent = 'Highest Qualification is required';
+            }
+
+            if(selectedNationality === null) {
+                nationalityInput.classList.toggle('error-input');
+                nationalityErrorText.classList.toggle('hidden');
+                nationalityErrorText.textContent = 'Nationality is required';
+            }
+        });
+        // ------------- Enquire Now Form Handling End -------------
+    </script>
+</body>
+
+</html>

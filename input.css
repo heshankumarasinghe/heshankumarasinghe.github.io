@@ -1,0 +1,281 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: hsl(343, 95%, 36%);
+  --navbarHeight: 4rem;
+}
+
+/**************************/
+/* Utilities */
+/**************************/
+
+/* Slider Pagination Bullets */
+.pagination-bullet {
+  @apply w-3.5 h-3.5 rounded-full mx-1 cursor-pointer;
+}
+
+.pagination-bullet-primary {
+  @apply bg-transparent bg-secondary;
+}
+
+.pagination-bullet-secondary {
+  @apply bg-transparent border border-white;
+}
+
+.pagination-bullet-primary-active {
+  @apply bg-primary;
+}
+
+.pagination-bullet-secondary-active {
+  @apply bg-white;
+}
+
+/* Dropdown Menu Checkbox */
+
+.dropdown-menu-checkbox {
+  @apply p-3 mr-2 bg-onSecondary border border-slate-500;
+}
+
+.dropdown-menu-checkbox-active {
+  @apply bg-primary border-primary;
+}
+
+.dropdown-menu-text {
+  @apply px-3.5 py-2 flex items-start cursor-pointer;
+}
+
+.dropdown-menu-text-active {
+  @apply bg-secondary text-onSecondary;
+}
+
+/*  Custom Oval Button */
+
+.oval-button {
+  @apply cursor-pointer bg-secondary rounded-3xl py-3.5 px-8 flex justify-center items-center text-onSecondary font-bold text-sm tracking-wide;
+}
+
+.oval-button-active {
+    @apply bg-primary;
+}
+
+.oval-button-invert {
+    @apply bg-white text-secondary outline outline-secondary;
+}
+
+.oval-button-invert-active,
+.oval-button-invert:hover {
+    @apply bg-primary text-onPrimary outline-none;
+}
+
+/* 3 Dot Loading Animation */
+
+.dot-flashing {
+  @apply relative w-[15px] h-[15px] rounded-full bg-white text-white animate-dot-flashing animation-delay-500;
+}
+
+.dot-flashing::before,
+.dot-flashing::after {
+  @apply content-[''] inline-block absolute top-0;
+}
+
+.dot-flashing::before {
+  @apply -left-5 w-[15px] h-[15px] rounded-full bg-white text-white animate-dot-flashing animation-delay-none;
+}
+.dot-flashing::after {
+  @apply left-5 w-[15px] h-[15px] rounded-full bg-white text-white animate-dot-flashing animation-delay-1000;
+}
+
+/* Container Tag */
+.container-tag {
+    @apply absolute z-50 top-0 right-0 mr-0 mt-0 bg-slate-700 text-white text-sm font-bold py-2 px-3 rounded-bl-lg;
+}
+
+/* Rounded Pagination Button */
+.rounded-pagination-button {
+    @apply flex justify-center items-center w-12 h-12 rounded-full bg-slate-200 text-secondary font-extralight cursor-pointer;
+}
+
+.rounded-pagination-button-active,
+.rounded-pagination-button:hover {
+    @apply bg-primary text-onPrimary;
+}
+
+/* .dot-flashing {
+  position: relative;
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  background-color: white;
+  color: white;
+  animation: dot-flashing 1s infinite linear alternate;
+  animation-delay: 0.5s;
+}
+
+.dot-flashing::before,
+.dot-flashing::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+}
+
+.dot-flashing::before {
+  left: -20px;
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  background-color: white;
+  color: white;
+  animation: dot-flashing 1s infinite alternate;
+  animation-delay: 0s;
+}
+
+.dot-flashing::after {
+  left: 20px;
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  background-color: white;
+  color: white;
+  animation: dot-flashing 1s infinite alternate;
+  animation-delay: 1s;
+}
+
+@keyframes dot-flashing {
+  0% {
+    background-color: white;
+  }
+  50%,
+  100% {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+} */
+
+/* Accordion */
+.accordion-toggle {
+    @apply overflow-scroll transition-all duration-300 ease-linear;
+}
+
+.accordion-toggle-collapsed {
+    @apply max-h-0 p-0;
+}
+
+.accordion-toggle-active {
+    @apply max-h-96 p-2;
+}
+
+.accordion-header {
+    @apply flex justify-between items-center bg-gray-100 text-gray-500 p-8;
+}
+
+.accordion-header-secondary {
+    @apply bg-white;
+}
+
+
+/* Fade In Transition Related CSS */
+/* ----- Todo: Refactor To Tailwind Later   ---- */
+.transition-item {
+    display: none;
+}
+
+.transition-item-active {
+    display: block;
+    animation: fade 0.5s ease-in-out;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Error Input */
+.error-input {
+    @apply border border-red-500;
+    box-shadow: inset 0 0 15px 0 red;
+}
+
+
+/**************************/
+/* Navbar */
+/**************************/
+
+.nav-list {
+  @apply flex flex-row max-w-screen-xl mx-auto justify-between items-center space-x-6 bg-accent text-onAccent font-bold uppercase h-[var(--navbarHeight)];
+}
+
+.nav-link-item {
+  @apply relative m-0 h-full;
+}
+
+.underline-animation::after {
+  /* @apply content-[''] block h-1.5 w-[120%] bg-primary scale-x-0 origin-left absolute bottom-0 left-[-10%] transition-transform duration-300 ease-in; */
+  content: "";
+  display: inline-block;
+  height: 6px;
+  width: 120%;
+  background-color: var(--primary);
+  transform: scaleX(0);
+  transform-origin: left;
+  position: absolute;
+  bottom: 0;
+  left: -10%;
+  transition: transform 0.3s ease;
+}
+
+.underline-animation:hover::after {
+  transform: scaleX(1);
+}
+
+.underline-animation-no-overflow::after {
+    width: 100%;
+    left: 0;
+}
+
+/**************************/
+/* Hero Sections */
+/**************************/
+
+.hero-image-container {
+  height: calc(100vh - var(--navbarHeight)) !important;
+}
+
+/**************************/
+/* Hero Swiper */
+/**************************/
+
+#hero-swiper-container .swiper-button-next {
+  @apply !right-12;
+}
+
+#hero-swiper-container .swiper-button-prev {
+  @apply !left-12;
+}
+
+#hero-swiper-container .swiper-button-next::after,
+#hero-swiper-container .swiper-button-prev::after {
+  content: "" !important;
+}
+
+#hero-swiper-container .swiper-pagination {
+  @apply !left-12 !bottom-10 !w-auto;
+}
+
+#hero-swiper-container .swiper-pagination-bullet,
+#hero-swiper-container .swiper-pagination-bullet-active {
+  @apply !w-3 !h-3 !border-onPrimary !border-2 !border-solid;
+}
+
+#hero-swiper-container .swiper-pagination-bullet {
+  @apply !bg-transparent !opacity-100;
+}
+
+#hero-swiper-container .swiper-pagination-bullet-active {
+  @apply !bg-onPrimary;
+}
